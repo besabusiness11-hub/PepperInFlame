@@ -142,7 +142,7 @@ const TattooHome = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="page-section reviews-section">
+      {/* <section className="page-section reviews-section">
         <div className="section-header">
           <h2 className="section-title">{t.reviews.title}</h2>
           <span className="section-subtitle">{t.reviews.subtitle}</span>
@@ -163,7 +163,7 @@ const TattooHome = () => {
             {t.reviews.cta}
           </a>
         </div>
-      </section>
+      </section> */}
 
       {/* Instagram Section */}
       <section className="page-section instagram-section">
