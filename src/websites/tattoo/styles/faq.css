@@ -5,7 +5,7 @@
 
 .faq-item {
   border-bottom: 1px solid var(--tattoo-border);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .faq-question {
@@ -13,15 +13,16 @@
   text-align: left;
   background: transparent;
   border: none;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   color: var(--tattoo-text);
   font-family: var(--tattoo-font-heading);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
+  line-height: 1.3;
 }
 
 .faq-question:hover {
@@ -29,8 +30,10 @@
 }
 
 .faq-icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .faq-item.active .faq-icon {
@@ -52,8 +55,43 @@
 }
 
 .faq-answer-content {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.8;
-  font-size: 1.1rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 769px) {
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+  
+  .faq-question {
+    padding: 2rem 0;
+    font-size: 1.3rem;
+  }
+  
+  .faq-icon {
+    font-size: 1.4rem;
+  }
+  
+  .faq-answer-content {
+    padding-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-question {
+    font-size: 1.5rem;
+  }
+  
+  .faq-icon {
+    font-size: 1.5rem;
+  }
+  
+  .faq-answer-content {
+    font-size: 1.1rem;
+  }
 }
