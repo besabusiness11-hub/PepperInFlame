@@ -1,0 +1,445 @@
+/* Hero Section */
+.tattoo-hero {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1080px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.tattoo-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.tattoo-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #050505);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 2rem;
+  margin-top: -5vh;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-tagline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--tattoo-accent);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero-title {
+  font-family: var(--tattoo-font-heading);
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: var(--tattoo-font-heading);
+  font-style: italic;
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #050505 100%);
+  padding: 4rem 2rem;
+  margin-top: -1px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background: var(--tattoo-border);
+}
+
+.stat-item:last-child::after {
+  display: none;
+}
+
+.stat-number {
+  font-family: var(--tattoo-font-heading);
+  font-size: 2.8rem;
+  color: var(--tattoo-accent);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Why Choose */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--tattoo-border);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--tattoo-accent);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+.feature-icon {
+  color: var(--tattoo-accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-title {
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--tattoo-text);
+}
+
+.feature-desc {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+/* Process Section */
+.process-section {
+  background: #000;
+  position: relative;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  position: relative;
+}
+
+.process-step {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.process-number {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--tattoo-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.6rem;
+  color: var(--tattoo-accent);
+  margin: 0 auto 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+.process-step:hover .process-number {
+  background: var(--tattoo-accent);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.process-title {
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.process-desc {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Reviews */
+.reviews-section {
+  background: linear-gradient(to bottom, #0a0a0a, #000);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--tattoo-border);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tattoo-accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.review-stars {
+  color: var(--tattoo-accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--tattoo-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* Instagram Section */
+.instagram-section {
+  background: #050505;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.instagram-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.instagram-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.instagram-item:hover img {
+  transform: scale(1.1);
+}
+
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.instagram-item:hover .instagram-overlay {
+  opacity: 0;
+}
+
+.instagram-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.instagram-item:hover .instagram-icon {
+  background: rgba(212, 175, 55, 0.8);
+}
+
+/* Ready to Start */
+.ready-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  text-align: center;
+  padding: 10rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.ready-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.ready-section .section-title,
+.ready-section .ready-subtitle,
+.ready-section .tattoo-btn-accent {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.ready-section .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.ready-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-content {
+    margin-top: 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .stat-item::after {
+    display: none;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

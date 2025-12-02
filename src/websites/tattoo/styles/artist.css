@@ -1,0 +1,89 @@
+.artist-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid var(--tattoo-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-bottom: 3rem;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tattoo-accent);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.artist-header {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  align-items: center;
+}
+
+.artist-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--tattoo-accent);
+}
+
+.artist-info {
+  flex: 1;
+}
+
+.artist-name {
+  font-family: var(--tattoo-font-heading);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--tattoo-accent);
+}
+
+.artist-specialty {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.artist-bio {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.artist-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.artist-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-stat-number {
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.5rem;
+  color: var(--tattoo-accent);
+}
+
+.artist-stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .artist-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .artist-stats {
+    justify-content: center;
+  }
+}

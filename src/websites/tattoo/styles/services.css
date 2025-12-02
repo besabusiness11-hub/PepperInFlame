@@ -1,0 +1,61 @@
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--tattoo-border);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--tattoo-accent);
+  transform: translateX(10px);
+}
+
+.service-info h3 {
+  font-family: var(--tattoo-font-heading);
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.service-desc {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+}
+
+.service-action {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.service-price {
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.8rem;
+  color: var(--tattoo-accent);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .service-action {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+}

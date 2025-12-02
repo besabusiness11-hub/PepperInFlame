@@ -1,0 +1,213 @@
+/* Tattoo Website Theme */
+:root {
+  --tattoo-bg: #050505;
+  --tattoo-text: #f0f0f0;
+  --tattoo-accent: #d4af37; /* Gold accent for premium feel */
+  --tattoo-accent-hover: #f9d768;
+  --tattoo-border: rgba(255, 255, 255, 0.1);
+  --tattoo-font-heading: 'Playfair Display', serif;
+  --tattoo-font-body: 'Raleway', sans-serif;
+}
+
+.tattoo-layout {
+  background-color: var(--tattoo-bg);
+  color: var(--tattoo-text);
+  font-family: var(--tattoo-font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.tattoo-header {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--tattoo-border);
+  position: sticky;
+  top: 0;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.tattoo-logo {
+  font-family: var(--tattoo-font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--tattoo-text);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tattoo-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.tattoo-nav-link {
+  color: var(--tattoo-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.tattoo-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--tattoo-accent);
+  transition: width 0.3s ease;
+}
+
+.tattoo-nav-link:hover {
+  color: var(--tattoo-accent);
+}
+
+.tattoo-nav-link:hover::after,
+.tattoo-nav-link.active::after {
+  width: 100%;
+}
+
+.tattoo-btn-primary {
+  background: transparent;
+  border: 1px solid var(--tattoo-text);
+  color: var(--tattoo-text);
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+.tattoo-btn-primary:hover {
+  background: var(--tattoo-text);
+  color: var(--tattoo-bg);
+}
+
+.tattoo-btn-accent {
+  background: var(--tattoo-accent);
+  border: 1px solid var(--tattoo-accent);
+  color: #000;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.tattoo-btn-accent:hover {
+  background: var(--tattoo-accent-hover);
+  border-color: var(--tattoo-accent-hover);
+}
+
+.tattoo-btn-lang {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--tattoo-text);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--tattoo-font-body);
+  min-width: 60px;
+  text-align: center;
+}
+
+.tattoo-btn-lang:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--tattoo-text);
+}
+
+/* Main Content Area */
+.tattoo-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.tattoo-footer {
+  padding: 5rem 2rem 3rem;
+  border-top: 1px solid var(--tattoo-border);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom, #050505, #000);
+}
+
+/* Page Transitions / Common Sections */
+.page-section {
+  padding: 6rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+
+
+.section-title {
+  font-family: var(--tattoo-font-heading);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--tattoo-accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tattoo-header {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .tattoo-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .page-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
