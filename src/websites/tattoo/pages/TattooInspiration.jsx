@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../../../context/LanguageContext';
 import '../styles/inspiration.css';
 import '../styles/artist.css';
+import pepperPost1 from '../../../assets/pepperPost1.jpg'
+import pepperPost2 from '../../../assets/pepperPost2.jpg'
+import pepperPost3 from '../../../assets/pepperPost3.jpg'
+import pepperPost4 from '../../../assets/pepperPost4.jpg'
+import pepperPost5 from '../../../assets/pepperPost5.jpg'
 
 const artists = [
   { 
@@ -35,12 +40,11 @@ const artists = [
 ];
 
 const galleryImages = [
-  { id: 1, artistId: 1, artistName: 'Marco', src: 'https://images.unsplash.com/photo-1560707303-4e98035872dc?q=80&w=1932&auto=format&fit=crop' },
-  { id: 2, artistId: 2, artistName: 'Elena', src: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=2070&auto=format&fit=crop' },
-  { id: 3, artistId: 3, artistName: 'Luca', src: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1974&auto=format&fit=crop' },
-  { id: 4, artistId: 1, artistName: 'Marco', src: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=1974&auto=format&fit=crop' },
-  { id: 5, artistId: 2, artistName: 'Elena', src: 'https://images.unsplash.com/photo-1590246814883-05556505252e?q=80&w=2070&auto=format&fit=crop' },
-  { id: 6, artistId: 3, artistName: 'Luca', src: 'https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1974&auto=format&fit=crop' }
+  { id: 1, artistId: 1, artistName: 'Marco', src: pepperPost1 },
+  { id: 2, artistId: 2, artistName: 'Elena', src: pepperPost2 },
+  { id: 3, artistId: 3, artistName: 'Luca', src: pepperPost3 },
+  { id: 4, artistId: 1, artistName: 'Marco', src: pepperPost4 },
+  { id: 5, artistId: 2, artistName: 'Elena', src: pepperPost5 }
 ];
 
 const TattooInspiration = () => {

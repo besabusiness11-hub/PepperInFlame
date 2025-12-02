@@ -55,7 +55,12 @@
   
   .service-action {
     width: 100%;
-    justify-content: space-between;
-    gap: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .service-price {
+    font-size: 2rem;
   }
 }

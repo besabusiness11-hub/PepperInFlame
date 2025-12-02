@@ -158,6 +158,8 @@ body {
   position: relative;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--tattoo-border);
+  display: flex;
+  align-items: center;
 }
 
 .tattoo-nav-link::after {
