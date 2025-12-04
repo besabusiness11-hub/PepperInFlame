@@ -1,0 +1,87 @@
+/* Main Jewelry Site Styles */
+
+:root {
+  --jewelry-white: #FFFFFF;
+  --jewelry-cream: #FFF8F0;
+  --jewelry-cream-dark: #F5EBE0;
+  --jewelry-gold: #D4AF37;
+  --jewelry-gold-light: #F4E5C2;
+  --jewelry-gold-dark: #B8941F;
+  --jewelry-text-dark: #2C2C2C;
+  --jewelry-text-light: #6B6B6B;
+  --jewelry-border: #E8DCC8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.jewelry-layout {
+  min-height: 100vh;
+  background-color: var(--jewelry-white);
+  color: var(--jewelry-text-dark);
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+}
+
+.jewelry-main {
+  width: 100%;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--jewelry-text-dark);
+}
+
+p {
+  font-family: 'Lato', 'Arial', sans-serif;
+  line-height: 1.8;
+  color: var(--jewelry-text-light);
+}
+
+/* Section Styles */
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--jewelry-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--jewelry-gold), transparent);
+  margin: 20px auto 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}

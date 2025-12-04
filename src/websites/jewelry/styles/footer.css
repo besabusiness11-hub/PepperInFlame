@@ -1,0 +1,165 @@
+/* Jewelry Footer Styles */
+
+.jewelry-footer {
+  background: var(--jewelry-cream);
+  border-top: 1px solid var(--jewelry-border);
+  padding: 60px 0 30px;
+}
+
+.jewelry-footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--jewelry-border);
+}
+
+.footer-brand h3 {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  color: var(--jewelry-text-dark);
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--jewelry-gold);
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+  color: var(--jewelry-text-dark);
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--jewelry-text-light);
+}
+
+.footer-section a {
+  color: var(--jewelry-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--jewelry-gold);
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--jewelry-border);
+  border-radius: 50%;
+  color: var(--jewelry-text-dark);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--jewelry-gold);
+  border-color: var(--jewelry-gold);
+  color: var(--jewelry-white);
+  transform: translateY(-3px);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Legal Links */
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-legal a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--jewelry-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--jewelry-gold);
+}
+
+.footer-legal span {
+  color: var(--jewelry-border);
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright p {
+  font-size: 0.8rem;
+  color: var(--jewelry-text-light);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jewelry-footer-container {
+    padding: 0 20px;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-legal span {
+    display: none;
+  }
+}

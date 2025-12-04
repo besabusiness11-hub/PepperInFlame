@@ -10,6 +10,10 @@ import TattooInspiration from './websites/tattoo/pages/TattooInspiration';
 import TattooServices from './websites/tattoo/pages/TattooServices';
 import TattooFAQ from './websites/tattoo/pages/TattooFAQ';
 
+// Jewelry Website Imports
+import JewelryLayout from './websites/jewelry/layouts/JewelryLayout';
+import JewelryHome from './websites/jewelry/pages/JewelryHome';
+
 import './App.css';
 
 function App() {
@@ -28,8 +32,12 @@ function App() {
             <Route path="book" element={<div style={{padding: '10rem', textAlign: 'center', color: 'white'}}>Booking System Coming Soon</div>} />
           </Route>
 
+          {/* Jewelry Website Routes */}
+          <Route path="/jewelry" element={<JewelryLayout />}>
+            <Route index element={<JewelryHome />} />
+          </Route>
+
           {/* Placeholders for other routes */}
-          <Route path="/jewelry" element={<Landing />} />
           <Route path="/piercing" element={<Landing />} />
           <Route path="/concept" element={<Landing />} />
           <Route path="/events" element={<Landing />} />
